@@ -1,69 +1,82 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <header className="header">
+        <div className="container header-content">
+          <div className="logo">
+            <Link href="/">
+              <span style={{color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
+            </Link>
+          </div>
+          <nav className="nav">
+            <Link href="/">Início</Link>
+            <Link href="/catalogo">Catálogo</Link>
+            <Link href="#sobre">Sobre</Link>
+            <Link href="#contato">Contato</Link>
+          </nav>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+      </header>
+
+      <main>
+        <section className="hero">
+          <div className="container hero-content">
+            <h1>Enxergue o mundo com mais estilo e precisão.</h1>
+            <p>Armações exclusivas, lentes de alta tecnologia e atendimento personalizado em Itupeva.</p>
+            <Link href="/catalogo" className="btn btn-primary">
+              Ver Coleção
+            </Link>
+          </div>
+        </section>
+
+        <section id="sobre" className="about section">
+          <div className="container">
+            <h2>Sobre a Óticas Candiani</h2>
+            <p>
+              Somos apaixonados por cuidar da sua visão, oferecendo os melhores produtos com um toque premium. 
+              Nossa missão é trazer clareza e estilo para o seu dia a dia.
+            </p>
+          </div>
+        </section>
+
+        <section className="features section bg-light">
+          <div className="container features-grid">
+            <div className="feature-card">
+              <h3>Lentes de Alta Tecnologia</h3>
+              <p>Trabalhamos com os melhores laboratórios para garantir visão perfeita.</p>
+            </div>
+            <div className="feature-card">
+              <h3>Armações Premium</h3>
+              <p>Modelos selecionados para garantir conforto, durabilidade e estética refinada.</p>
+            </div>
+            <div className="feature-card">
+              <h3>Atendimento Personalizado</h3>
+              <p>Nossa equipe te ajuda a escolher a armação ideal para o seu formato de rosto.</p>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+
+      <footer id="contato" className="footer">
+        <div className="container footer-grid">
+          <div>
+            <h3>Óticas Candiani</h3>
+            <p>Enxergue além do comum.</p>
+          </div>
+          <div>
+            <h3>Contato</h3>
+            <p>Telefone: (11) 5038-0927</p>
+            <p>Avenida Brasil, nº 209</p>
+            <p>Centro, Itupeva - SP</p>
+            <p>CEP: 13295-152</p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Óticas Candiani. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </>
   );
 }
