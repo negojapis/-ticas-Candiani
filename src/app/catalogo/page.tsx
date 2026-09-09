@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 // Mock data para visualização antes de integrarmos com o banco de dados
 const mockProducts = [
@@ -14,7 +15,7 @@ export default function Catalogo() {
   return (
     <>
       <header className="header">
-        <div className="container header-content">
+        <div className="header-content">
           <div className="logo">
             <Link href="/">
               <span style={{color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
@@ -70,24 +71,7 @@ export default function Catalogo() {
         </div>
       </main>
 
-      <footer className="footer">
-        <div className="container footer-grid">
-          <div>
-            <h3>Óticas Candiani</h3>
-            <p>Enxergue além do comum.</p>
-          </div>
-          <div>
-            <h3>Contato</h3>
-            <p>Telefone: (11) 5038-0927</p>
-            <p>Avenida Brasil, nº 209</p>
-            <p>Centro, Itupeva - SP</p>
-            <p>CEP: 13295-152</p>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Óticas Candiani. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

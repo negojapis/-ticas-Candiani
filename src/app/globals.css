@@ -112,6 +112,7 @@ button {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  padding: 0 5%;
 }
 
 .nav {
@@ -221,24 +222,116 @@ button {
   border: 0;
 }
 
-/* Footer */
-.footer {
+/* Footer Advanced */
+.footer-advanced {
   background-color: var(--color-text);
   color: var(--color-white);
   padding: 4rem 0 2rem;
+  font-family: var(--font-outfit), sans-serif;
 }
 
-.footer-grid {
+.footer-advanced-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brand-col .footer-desc {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  color: var(--color-white);
+}
+
+.social-links a:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.footer-title {
+  color: var(--color-white);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+.contact-info {
+  margin-bottom: 1rem;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.contact-value {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.contact-value.highlight {
+  font-size: 1.2rem;
+}
+
+.contact-value:hover {
+  color: var(--color-primary);
+}
+
+.contact-hours {
+  font-size: 0.85rem;
+  color: #aaa;
+  line-height: 1.4;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #888;
+  font-size: 0.9rem;
 }
 
 /* RESPONSIVE DESIGN - MOBILE & TABLET */
@@ -277,8 +370,12 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .footer-grid {
+  .footer-advanced-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }

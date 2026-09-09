@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <>
       <header className="header">
-        <div className="container header-content animate-fade-in">
+        <div className="header-content animate-fade-in">
           <div className="logo">
             <Link href="/">
               <span style={{color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
@@ -79,26 +80,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer id="contato" className="footer">
-        <div className="container footer-grid">
-          <div>
-            <h3 style={{ color: 'var(--color-primary)' }}>Óticas Candiani</h3>
-            <p style={{ marginTop: '1rem', color: '#ccc' }}>Enxergue além do comum.</p>
-          </div>
-          <div>
-            <h3 style={{ color: 'var(--color-primary)' }}>Contato</h3>
-            <ul style={{ listStyle: 'none', marginTop: '1rem', color: '#ccc', lineHeight: '2' }}>
-              <li><strong>Telefone:</strong> (11) 5038-0927</li>
-              <li><strong>Endereço:</strong> Avenida Brasil, nº 209</li>
-              <li>Centro, Itupeva - SP</li>
-              <li>CEP: 13295-152</li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Óticas Candiani. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

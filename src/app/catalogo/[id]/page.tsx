@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 // Usaremos os mesmos mock data provisórios
 const mockProducts = [
@@ -21,7 +22,7 @@ export default function ProdutoDetalhe({ params }: { params: { id: string } }) {
   return (
     <>
       <header className="header">
-        <div className="container header-content">
+        <div className="header-content">
           <div className="logo">
             <Link href="/">
               <span style={{color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
@@ -78,6 +79,7 @@ export default function ProdutoDetalhe({ params }: { params: { id: string } }) {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
