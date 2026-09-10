@@ -1,0 +1,129 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 5rem 1rem;
+}
+
+.swirlContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.swirlTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-33%, -33%);
+  color: #f1f1f1;
+}
+
+.swirlBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(25%, 25%);
+  color: #f1f1f1;
+}
+
+.imagesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30; /* Colocado acima do texto para que o backdrop-filter não interfira */
+  pointer-events: none;
+  mix-blend-mode: multiply; /* Aplica o multiply no container inteiro para resolver o stacking context */
+}
+
+.floatingImage {
+  position: absolute;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* Multiplica a imagem com outras imagens na mesma camada */
+  filter: contrast(1.1) brightness(1.05); /* Força qualquer cinza claro no fundo a virar branco puro (255,255,255) */
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.textContent {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: var(--color-primary);
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .heroSection {
+    min-height: 60vh;
+  }
+  .textContent {
+    padding: 1.5rem;
+  }
+}

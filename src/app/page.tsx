@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import heroBg from './IMG-Hero.png';
+import { FloatingHero } from '@/components/FloatingHero';
 
 export default function Home() {
   return (
@@ -9,7 +11,7 @@ export default function Home() {
         <div className="header-content animate-fade-in">
           <div className="logo">
             <Link href="/">
-              <span style={{color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
+              <span style={{color: '#000000', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
             </Link>
           </div>
           <nav className="nav">
@@ -22,17 +24,34 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="hero">
-          <div className="container hero-content">
-            <h1 className="animate-slide-up" style={{ opacity: 0 }}>Enxergue o mundo com mais estilo e precisão.</h1>
-            <p className="animate-slide-up delay-1" style={{ opacity: 0 }}>Armações exclusivas, lentes de alta tecnologia e atendimento personalizado em Itupeva.</p>
-            <div className="animate-slide-up delay-2" style={{ opacity: 0 }}>
-              <Link href="/catalogo" className="btn btn-primary">
-                Ver Coleção
-              </Link>
-            </div>
-          </div>
-        </section>
+        <FloatingHero 
+          title="Enxergue o mundo com mais estilo e precisão."
+          description="Armações exclusivas, lentes de alta tecnologia e atendimento personalizado em Itupeva."
+          ctaText="Ver Coleção"
+          ctaLink="/catalogo"
+          images={[
+            {
+              src: "/images/round_black_glasses_new_1789055635143.jpg",
+              alt: "Óculos Preto Redondo",
+              style: { width: '300px', top: '15%', left: '5%', transform: 'rotate(-15deg)' }
+            },
+            {
+              src: "/images/cateye_red_glasses_1789054604186.jpg",
+              alt: "Óculos Vermelho Cat-eye",
+              style: { width: '300px', bottom: '15%', right: '5%', transform: 'rotate(10deg)' }
+            },
+            {
+              src: "/images/aviator_gold_glasses_1789054614994.jpg",
+              alt: "Óculos Aviador Dourado",
+              style: { width: '280px', top: '5%', right: '15%', transform: 'rotate(25deg)' }
+            },
+            {
+              src: "/images/square_blue_glasses_1789054658916.jpg",
+              alt: "Óculos Azul Quadrado",
+              style: { width: '320px', bottom: '10%', left: '20%', transform: 'rotate(-20deg)' }
+            }
+          ]}
+        />
 
         <section id="sobre" className="about section">
           <div className="container animate-slide-up delay-1" style={{ opacity: 0 }}>
