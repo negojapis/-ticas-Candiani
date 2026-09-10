@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import heroBg from './IMG-Hero.png';
 import { FloatingHero } from '@/components/FloatingHero';
+import AboutSection from '@/components/AboutSection';
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
       <header className="header">
         <div className="header-content animate-fade-in">
           <div className="logo">
-            <Link href="/">
-              <span style={{color: '#000000', fontWeight: 'bold', fontSize: '1.5rem'}}>Óticas Candiani</span>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontSize: '2.5rem', lineHeight: 0 }}>🌻</span>
+              <span style={{color: '#000000', fontWeight: 'normal', fontSize: '1.5rem'}}>Para enxergar sempre o lado bom da vida</span>
             </Link>
           </div>
           <nav className="nav">
@@ -25,7 +27,7 @@ export default function Home() {
 
       <main>
         <FloatingHero 
-          title="Enxergue o mundo com mais estilo e precisão."
+          title="Óticas Candiani"
           description="Armações exclusivas, lentes de alta tecnologia e atendimento personalizado em Itupeva."
           ctaText="Ver Coleção"
           ctaLink="/catalogo"
@@ -33,35 +35,37 @@ export default function Home() {
             {
               src: "/images/round_black_glasses_new_1789055635143.jpg",
               alt: "Óculos Preto Redondo",
-              style: { width: '300px', top: '15%', left: '5%', transform: 'rotate(-15deg)' }
+              style: { width: '280px', top: '2%', left: '12%', transform: 'rotate(-10deg)' }
             },
             {
-              src: "/images/cateye_red_glasses_1789054604186.jpg",
-              alt: "Óculos Vermelho Cat-eye",
-              style: { width: '300px', bottom: '15%', right: '5%', transform: 'rotate(10deg)' }
-            },
-            {
-              src: "/images/aviator_gold_glasses_1789054614994.jpg",
-              alt: "Óculos Aviador Dourado",
-              style: { width: '280px', top: '5%', right: '15%', transform: 'rotate(25deg)' }
+              src: "/images/clear_glasses_1789072643803.jpg",
+              alt: "Óculos Transparente",
+              style: { width: '250px', top: '30%', left: '2%', transform: 'rotate(15deg)' }
             },
             {
               src: "/images/square_blue_glasses_1789054658916.jpg",
               alt: "Óculos Azul Quadrado",
-              style: { width: '320px', bottom: '10%', left: '20%', transform: 'rotate(-20deg)' }
+              style: { width: '300px', bottom: '2%', left: '15%', transform: 'rotate(-20deg)' }
+            },
+            {
+              src: "/images/aviator_gold_glasses_1789054614994.jpg",
+              alt: "Óculos Aviador Dourado",
+              style: { width: '270px', top: '2%', right: '15%', transform: 'rotate(20deg)' }
+            },
+            {
+              src: "/images/tortoise_glasses_1789072392246.jpg",
+              alt: "Óculos Tartaruga",
+              style: { width: '310px', top: '30%', right: '2%', transform: 'rotate(-10deg)' }
+            },
+            {
+              src: "/images/cateye_red_glasses_1789054604186.jpg",
+              alt: "Óculos Vermelho Cat-eye",
+              style: { width: '290px', bottom: '2%', right: '12%', transform: 'rotate(12deg)' }
             }
           ]}
         />
 
-        <section id="sobre" className="about section">
-          <div className="container animate-slide-up delay-1" style={{ opacity: 0 }}>
-            <h2>Sobre a Óticas Candiani</h2>
-            <p style={{ maxWidth: '800px', marginTop: '1rem', color: 'var(--color-text-light)' }}>
-              Somos apaixonados por cuidar da sua visão, oferecendo os melhores produtos com um toque premium. 
-              Nossa missão é trazer clareza e estilo para o seu dia a dia, com armações que expressam a sua personalidade.
-            </p>
-          </div>
-        </section>
+        <AboutSection />
 
         <section className="features section bg-light">
           <div className="container features-grid">

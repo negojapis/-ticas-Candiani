@@ -71,20 +71,15 @@
   position: relative;
   z-index: 20;
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 0 1rem;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  padding: 2.5rem;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 .title {
   font-size: 3.5rem;
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   font-family: var(--font-montserrat), sans-serif;
 }
 
@@ -92,7 +87,9 @@
   font-size: 1.25rem;
   color: var(--color-text-light);
   line-height: 1.8;
+  margin-top: -0.5rem;
   margin-bottom: 2rem;
+  white-space: nowrap;
 }
 
 .ctaButton {
@@ -119,6 +116,7 @@
   }
   .description {
     font-size: 1.1rem;
+    white-space: normal; /* Permite quebra de linha no celular para não quebrar o layout */
   }
   .heroSection {
     min-height: 60vh;

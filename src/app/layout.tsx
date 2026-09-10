@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Outfit, Montserrat } from 'next/font/google'
+import { Outfit, Montserrat, Great_Vibes } from 'next/font/google'
 import './globals.css'
 
 const outfit = Outfit({ 
@@ -10,6 +10,12 @@ const outfit = Outfit({
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
+})
+
+const greatVibes = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-script',
 })
 
 export const metadata: Metadata = {
@@ -23,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${outfit.variable} ${montserrat.variable}`}>
+    <html lang="pt-BR" className={`${outfit.variable} ${montserrat.variable} ${greatVibes.variable}`}>
       <body>{children}</body>
     </html>
   )

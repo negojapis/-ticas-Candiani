@@ -112,7 +112,7 @@ button {
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  padding: 10px 5%;
+  padding: 10px 2% 10px 0;
 }
 
 .nav {
@@ -122,6 +122,7 @@ button {
 
 .nav a {
   font-weight: 500;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
   color: #000000;
 }

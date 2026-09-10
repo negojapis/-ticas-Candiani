@@ -1,0 +1,153 @@
+.aboutSection {
+  padding: 8rem 2%;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
+  gap: 8rem;
+}
+
+.textColumn {
+  flex: 1;
+  max-width: 550px;
+  padding-left: 2.5rem;
+  border-left: 6px solid var(--color-primary);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #1a202c; /* cor escura estilo a referência */
+  color: var(--color-white);
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: var(--color-primary);
+  color: #000000;
+}
+
+.imageColumn {
+  flex: 1.2;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.image1 {
+  z-index: 3;
+}
+
+.image2 {
+  z-index: 2;
+}
+
+.image3 {
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  font-family: var(--font-script), cursive;
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  z-index: 3;
+  text-shadow: 2px 4px 10px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .textColumn {
+    max-width: 100%;
+  }
+
+  .imageColumn {
+    width: 100%;
+    margin-top: 4rem;
+    min-height: 400px;
+  }
+
+  .imageWrapper {
+    width: 220px;
+    height: 300px;
+  }
+
+  .overlayText {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageColumn {
+    min-height: 350px;
+  }
+  
+  .imageWrapper {
+    width: 180px;
+    height: 250px;
+  }
+  
+  .overlayText {
+    font-size: 3rem;
+  }
+}

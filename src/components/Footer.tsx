@@ -67,8 +67,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Óticas Candiani. Todos os direitos reservados.</p>
+      <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 5%', flexWrap: 'wrap', gap: '1rem' }}>
+        <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} Óticas Candiani. Todos os direitos reservados.</p>
+        <p style={{ margin: 0 }}>Desenvolvido por Grace Code Systems</p>
       </div>
     </footer>
   );
