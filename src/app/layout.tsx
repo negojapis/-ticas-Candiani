@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   description: 'Enxergue o mundo com mais estilo e qualidade na Óticas Candiani.',
 }
 
+import WhatsAppButton from '@/components/WhatsAppButton'
+import ExitIntentPopup from '@/components/ExitIntentPopup'
+
 export default function RootLayout({
   children,
 }: {
@@ -30,7 +33,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${outfit.variable} ${montserrat.variable} ${greatVibes.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppButton />
+        <ExitIntentPopup />
+      </body>
     </html>
   )
 }

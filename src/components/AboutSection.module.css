@@ -36,7 +36,30 @@
   font-weight: 800;
   color: var(--color-text);
   line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.description {
   margin-bottom: 2.5rem;
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+.signature {
+  font-weight: 700;
+  color: var(--color-text) !important;
+  margin-top: 1.5rem;
+  font-size: 1.15rem !important;
+  font-style: italic;
 }
 
 .button {

@@ -13,9 +13,13 @@ export default function AboutSection() {
           <h2 className={styles.title}>
             Somos apaixonados por cuidar da sua visão com um toque premium.
           </h2>
-          <Link href="/catalogo" className={styles.button}>
-            Ver Coleção
-          </Link>
+          <div className={styles.description}>
+            <p>A Óticas Candiani é uma empresa que já faz parte de Itupeva e que tem como propósito cuidar de algo muito importante: a visão das pessoas.</p>
+            <p>Mas, quando você conhece a Candiani de perto, percebe que vai muito além de escolher um óculos. Existe todo um cuidado para entender o que cada cliente procura, seja por necessidade, conforto ou até mesmo para encontrar uma armação que tenha tudo a ver com o seu estilo.</p>
+            <p>A ideia é que cada pessoa se sinta bem atendida e segura na hora de fazer sua escolha, encontrando aquilo que realmente combina com ela.</p>
+            <p>É uma ótica que une cuidado, atendimento próximo e estilo, tornando a experiência de escolher um novo óculos mais leve e personalizada.</p>
+            <p className={styles.signature}>Óticas Candiani</p>
+          </div>
         </div>
 
         {/* Right Column - Images */}
