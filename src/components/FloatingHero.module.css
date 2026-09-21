@@ -110,6 +110,21 @@
   color: var(--color-white);
 }
 
+/* Para telas médias, laptops ou quando o usuário dá muito zoom (125%, 150%) */
+@media (max-width: 1400px) {
+  .floatingImage {
+    max-width: 18vw !important;
+    height: auto !important;
+  }
+  /* Empurra os óculos para as bordas para não encavalarem no texto central */
+  .floatingImage:nth-child(1) { left: 2% !important; }
+  .floatingImage:nth-child(2) { left: 2% !important; }
+  .floatingImage:nth-child(3) { left: 5% !important; }
+  .floatingImage:nth-child(4) { right: 2% !important; }
+  .floatingImage:nth-child(5) { right: 2% !important; }
+  .floatingImage:nth-child(6) { right: 5% !important; }
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 2.5rem;
