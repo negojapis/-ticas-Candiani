@@ -88,6 +88,11 @@ export default function Home() {
               <h3>O Melhor Atendimento de Itupeva</h3>
               <p>Uma experiência de compra única na cidade. Nossa equipe de especialistas realiza consultoria visagista para te ajudar a escolher a armação perfeita que harmoniza com seu formato de rosto e estilo pessoal.</p>
             </div>
+            <div className="feature-card animate-slide-up delay-3" style={{ opacity: 0 }}>
+              <div className="feature-icon">🛠️</div>
+              <h3>Garantia e Ajustes Gratuitos</h3>
+              <p>Nosso compromisso não termina na entrega. Oferecemos ajustes, limpeza ultrassônica e manutenção preventiva gratuitos para que seus óculos estejam sempre perfeitos e confortáveis no seu rosto.</p>
+            </div>
           </div>
         </section>
 

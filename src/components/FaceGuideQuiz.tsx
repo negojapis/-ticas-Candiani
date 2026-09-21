@@ -263,7 +263,7 @@ export default function FaceGuideQuiz() {
             </button>
             <button className={`quiz-card ${answers.type === 'Ambos' ? 'selected' : ''}`} onClick={() => { setAnswers({...answers, type: 'Ambos'}); handleNext(); }}>
               <div className="quiz-icon-large" style={{ width: '100%', height: '120px', borderRadius: '12px', overflow: 'hidden', marginBottom: '1rem', boxShadow: '0 5px 15px rgba(0,0,0,0.08)' }}>
-                <img src="/images/quiz_type_both.jpg" alt="Ambos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/Ambos.png" alt="Ambos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="quiz-label">Quero ver os dois</span>
             </button>
