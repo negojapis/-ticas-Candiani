@@ -3,7 +3,7 @@ import { Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="footer-advanced">
+    <footer id="contato" className="footer-advanced">
       <div className="container footer-advanced-grid">
         {/* Coluna 1: Logo e Redes */}
         <div className="footer-col brand-col">
