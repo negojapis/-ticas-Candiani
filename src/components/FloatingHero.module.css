@@ -140,7 +140,7 @@
     padding: 1.5rem;
   }
   .imagesContainer {
-    z-index: 30;
+    z-index: 10;
     opacity: 1;
   }
   .floatingImage {
@@ -148,11 +148,15 @@
     height: auto !important;
   }
   
-  /* Reposiciona os óculos mais para dentro para não cortarem */
+  /* Esconde os óculos do meio para não poluir a tela do celular */
+  .floatingImage:nth-child(2),
+  .floatingImage:nth-child(5) {
+    display: none !important;
+  }
+
+  /* Reposiciona os 4 óculos restantes nas bordas livres */
   .floatingImage:nth-child(1) { top: 2% !important; left: 2% !important; }
-  .floatingImage:nth-child(2) { top: 38% !important; left: 2% !important; }
   .floatingImage:nth-child(3) { bottom: 8% !important; left: 2% !important; }
   .floatingImage:nth-child(4) { top: 5% !important; right: 2% !important; }
-  .floatingImage:nth-child(5) { top: 40% !important; right: 2% !important; }
   .floatingImage:nth-child(6) { bottom: 12% !important; right: 2% !important; }
 }
