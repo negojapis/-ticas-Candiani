@@ -125,11 +125,19 @@
     padding: 1.5rem;
   }
   .imagesContainer {
-    z-index: 10;
-    opacity: 0.15;
+    z-index: 30;
+    opacity: 1;
   }
   .floatingImage {
-    max-width: 140px !important;
+    max-width: 100px !important;
     height: auto !important;
   }
+  
+  /* Reposiciona os óculos nas bordas para não tapar o texto no celular */
+  .floatingImage:nth-child(1) { top: 0% !important; left: -2% !important; }
+  .floatingImage:nth-child(2) { top: 35% !important; left: -10% !important; }
+  .floatingImage:nth-child(3) { bottom: 0% !important; left: 0% !important; }
+  .floatingImage:nth-child(4) { top: 2% !important; right: -5% !important; }
+  .floatingImage:nth-child(5) { top: 40% !important; right: -10% !important; }
+  .floatingImage:nth-child(6) { bottom: 2% !important; right: -2% !important; }
 }
