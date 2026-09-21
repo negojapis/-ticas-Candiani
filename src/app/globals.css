@@ -111,6 +111,12 @@ button {
   z-index: 100;
 }
 
+.logo-text {
+  color: #000000;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -588,9 +594,18 @@ button {
   }
   
   .nav {
-    gap: 1rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .hero {

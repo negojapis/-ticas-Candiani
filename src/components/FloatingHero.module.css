@@ -124,4 +124,8 @@
   .textContent {
     padding: 1.5rem;
   }
+  .imagesContainer {
+    z-index: 10;
+    opacity: 0.15;
+  }
 }
