@@ -586,27 +586,31 @@ button {
 /* RESPONSIVE DESIGN - MOBILE & TABLET */
 @media (max-width: 768px) {
   .header-content {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     height: auto;
-    padding: 1rem 0;
+    padding: 1rem;
     gap: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
   
   .nav {
     gap: 0.8rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
   }
 
   .nav a {
-    font-size: 0.95rem;
+    font-size: min(0.9rem, 3.5vw);
+    white-space: nowrap;
   }
 
   .logo-text {
     font-size: min(0.9rem, 3.8vw);
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
   }
 
   .hero {
