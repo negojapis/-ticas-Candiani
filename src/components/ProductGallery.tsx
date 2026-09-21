@@ -10,7 +10,7 @@ interface ProductGalleryProps {
 
 export default function ProductGallery({ images, blend }: ProductGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [zoomStyle, setZoomStyle] = useState({});
+  const [zoomStyle, setZoomStyle] = useState<{ backgroundPosition?: string }>({});
   const [isZooming, setIsZooming] = useState(false);
 
   const handleNext = () => {
