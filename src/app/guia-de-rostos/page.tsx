@@ -11,7 +11,6 @@ export const metadata = {
 export default function FaceGuidePage() {
   return (
     <main 
-      className="face-guide-page" 
       style={{ 
         minHeight: '100vh', 
         backgroundColor: '#ffffff',
