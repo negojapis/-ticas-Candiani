@@ -25,13 +25,13 @@ export default function AboutSection() {
         {/* Right Column - Images */}
         <div className={styles.imageColumn}>
           <div className={`${styles.imageWrapper} ${styles.image1}`}>
-            <video src="/videos/loja-candiani.mp4" autoPlay loop muted playsInline className={styles.image} />
+            <video ref={el => { if(el){ el.defaultMuted = true; el.muted = true; el.play().catch(()=>{}); } }} src="/videos/loja-candiani.mp4" autoPlay loop muted playsInline className={styles.image} />
           </div>
           <div className={`${styles.imageWrapper} ${styles.image2}`}>
-            <video src="/videos/modelos-candiani.mp4" autoPlay loop muted playsInline className={styles.image} />
+            <video ref={el => { if(el){ el.defaultMuted = true; el.muted = true; el.play().catch(()=>{}); } }} src="/videos/modelos-candiani.mp4" autoPlay loop muted playsInline className={styles.image} />
           </div>
           <div className={`${styles.imageWrapper} ${styles.image3}`}>
-            <video src="/videos/outro-candiani.mp4" autoPlay loop muted playsInline className={styles.image} />
+            <video ref={el => { if(el){ el.defaultMuted = true; el.muted = true; el.play().catch(()=>{}); } }} src="/videos/outro-candiani.mp4" autoPlay loop muted playsInline className={styles.image} />
           </div>
           
         </div>
