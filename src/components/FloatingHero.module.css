@@ -128,4 +128,8 @@
     z-index: 10;
     opacity: 0.15;
   }
+  .floatingImage {
+    max-width: 140px !important;
+    height: auto !important;
+  }
 }
