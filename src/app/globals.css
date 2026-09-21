@@ -638,8 +638,10 @@ button {
   }
 
   .location-info {
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
+    display: inline-flex;
+    margin: 0 auto;
   }
 
   .footer-advanced-grid {

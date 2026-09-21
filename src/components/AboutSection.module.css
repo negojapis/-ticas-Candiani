@@ -163,11 +163,19 @@
 @media (max-width: 768px) {
   .imageColumn {
     min-height: 350px;
+    width: 100vw;
+    margin-left: -5%;
+    padding: 0 5% 1rem 5%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
   }
   
   .imageWrapper {
-    width: 180px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
+    scroll-snap-align: center;
   }
   
   .overlayText {
