@@ -649,8 +649,12 @@ button {
     text-align: center;
   }
 
+  .brand-col {
+    text-align: left;
+  }
+
   .social-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
