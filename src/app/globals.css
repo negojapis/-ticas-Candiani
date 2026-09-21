@@ -634,19 +634,19 @@ button {
   }
 
   .location-text {
-    text-align: center;
+    text-align: left;
   }
 
   .location-info {
     align-items: flex-start;
     text-align: left;
-    display: inline-flex;
-    margin: 0 auto;
+    display: flex;
+    margin: 0;
   }
 
   .footer-advanced-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
 
   .brand-col {
