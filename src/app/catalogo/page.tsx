@@ -21,7 +21,7 @@ export default function Catalogo() {
           <div className="logo">
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ fontSize: '2.5rem', lineHeight: 0 }}>🌻</span>
-              <span style={{color: '#000000', fontWeight: 'normal', fontSize: '1.5rem'}}>Para enxergar sempre o lado bom da vida</span>
+              <span className="logo-text">Para enxergar sempre o lado bom da vida</span>
             </Link>
           </div>
           <nav className="nav">
