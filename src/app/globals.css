@@ -608,9 +608,7 @@ button {
   }
 
   .logo-text {
-    font-size: min(0.9rem, 3.8vw);
-    white-space: nowrap;
-    text-align: left;
+    display: none;
   }
 
   .hero {
