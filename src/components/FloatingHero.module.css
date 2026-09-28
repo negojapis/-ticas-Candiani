@@ -148,15 +148,18 @@
     height: auto !important;
   }
   
-  /* Esconde os óculos do meio para não poluir a tela do celular */
+  /* Exibe todos os 6 óculos no mobile, com layout verdadeiramente espalhado (assimétrico) e menor para não poluir */
   .floatingImage:nth-child(2),
   .floatingImage:nth-child(5) {
-    display: none !important;
+    display: block !important;
   }
 
-  /* Reposiciona os 4 óculos restantes nas bordas livres */
-  .floatingImage:nth-child(1) { top: 2% !important; left: 2% !important; }
-  .floatingImage:nth-child(3) { bottom: 8% !important; left: 2% !important; }
-  .floatingImage:nth-child(4) { top: 5% !important; right: 2% !important; }
-  .floatingImage:nth-child(6) { bottom: 12% !important; right: 2% !important; }
+  .floatingImage:nth-child(1) { top: 5% !important; left: 10% !important; max-width: 85px !important; }
+  .floatingImage:nth-child(4) { top: 12% !important; right: 8% !important; max-width: 80px !important; }
+  
+  .floatingImage:nth-child(2) { top: 45% !important; left: 4% !important; max-width: 75px !important; }
+  .floatingImage:nth-child(5) { top: 35% !important; right: 4% !important; max-width: 70px !important; }
+  
+  .floatingImage:nth-child(3) { bottom: 5% !important; left: 18% !important; max-width: 90px !important; }
+  .floatingImage:nth-child(6) { bottom: 15% !important; right: 12% !important; max-width: 85px !important; }
 }

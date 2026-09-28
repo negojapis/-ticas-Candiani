@@ -9,7 +9,7 @@ export default async function ProdutoDetalhe({ params }: { params: Promise<{ id:
   
   // O número do WhatsApp será preenchido posteriormente, usando um genérico provisório
   const whatsappNumber = "551150380927"; // O número que temos de contato fixo temporário
-  const message = `Olá! Gostaria de solicitar um orçamento para o produto: ${product.name} (Ref: ${product.id})`;
+  const message = `Olá! Gostei muito do modelo ${product.name} (Ref: ${product.id}) que vi no site. Podem me ajudar?`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -46,8 +46,8 @@ export default async function ProdutoDetalhe({ params }: { params: Promise<{ id:
             <div style={{ padding: '1rem 0' }}>
               <span style={{color: 'var(--color-accent)', textTransform: 'uppercase', fontWeight: '800', letterSpacing: '2px', fontSize: '0.9rem'}}>{product.category}</span>
               <h1 style={{fontSize: '3.2rem', margin: '1rem 0', color: 'var(--color-text)', lineHeight: '1.1', fontWeight: '800'}}>{product.name}</h1>
-              <p style={{fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--color-primary)', marginBottom: '2rem'}}>
-                R$ {product.price.toFixed(2).replace('.', ',')}
+              <p style={{fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--color-accent)', marginBottom: '2rem'}}>
+                Consultoria e Venda Exclusiva via WhatsApp
               </p>
               
               <div style={{backgroundColor: '#fff', padding: '2rem', borderRadius: '16px', border: '1px solid #f0f0f0', marginBottom: '2.5rem', boxShadow: '0 4px 20px rgba(0,0,0,0.03)'}}>
@@ -72,9 +72,9 @@ export default async function ProdutoDetalhe({ params }: { params: Promise<{ id:
 
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary hover-scale" style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.8rem', fontSize: '1.2rem', padding: '1.2rem', borderRadius: '50px', transition: 'transform 0.3s ease, background-color 0.3s ease'}}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                Solicitar Atendimento VIP
+                Falar com um Consultor
               </a>
               <p style={{textAlign: 'center', fontSize: '0.9rem', color: '#888', marginTop: '1.2rem'}}>
                 Você será redirecionado para o WhatsApp com o produto selecionado.

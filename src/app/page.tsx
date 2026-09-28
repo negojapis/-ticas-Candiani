@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Footer from '@/components/Footer';
-import heroBg from './IMG-Hero.png';
 import { FloatingHero } from '@/components/FloatingHero';
 import AboutSection from '@/components/AboutSection';
 
@@ -39,8 +37,8 @@ export default function Home() {
               style: { width: '280px', top: '2%', left: '12%', transform: 'rotate(-10deg)' }
             },
             {
-              src: "/images/clear_glasses_1789072643803.jpg",
-              alt: "Óculos Transparente",
+              src: "/images/glasses_pink_round.jpg",
+              alt: "Óculos Rosa Redondo",
               style: { width: '250px', top: '30%', left: '2%', transform: 'rotate(15deg)' }
             },
             {
@@ -54,8 +52,8 @@ export default function Home() {
               style: { width: '270px', top: '2%', right: '15%', transform: 'rotate(20deg)' }
             },
             {
-              src: "/images/tortoise_glasses_1789072392246.jpg",
-              alt: "Óculos Tartaruga",
+              src: "/images/glasses_green_modern.jpg",
+              alt: "Óculos Verde Moderno",
               style: { width: '310px', top: '30%', right: '2%', transform: 'rotate(-10deg)' }
             },
             {
@@ -68,11 +66,29 @@ export default function Home() {
 
         <AboutSection />
 
-        <section className="features section bg-light">
-          <div className="container text-center animate-fade-in" style={{ opacity: 0, marginBottom: '4rem' }}>
+        <section className="features section bg-light" style={{position: 'relative', overflow: 'hidden', paddingTop: '15vw'}}>
+          {/* Watermark */}
+          <div style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            textAlign: 'center',
+            fontSize: '15vw',
+            fontWeight: 900,
+            color: 'rgba(0,0,0,0.05)',
+            zIndex: 0,
+            pointerEvents: 'none',
+            fontFamily: 'var(--font-montserrat)',
+            letterSpacing: '1vw',
+            userSelect: 'none',
+            lineHeight: 1
+          }}>PREMIUM</div>
+
+          <div className="container text-center animate-fade-in" style={{ opacity: 0, marginBottom: '4rem', position: 'relative', zIndex: 2 }}>
             <h2 style={{ fontSize: '2.5rem', color: 'var(--color-text)' }}>O Nosso Jeito de Cuidar da Sua Visão</h2>
           </div>
-          <div className="container-large features-grid">
+          <div className="container-large features-grid" style={{position: 'relative', zIndex: 2}}>
             <div className="feature-card animate-slide-up" style={{ opacity: 0 }}>
               <div className="feature-icon">🔬</div>
               <h3>Lentes de Alta Tecnologia</h3>
@@ -154,8 +170,26 @@ export default function Home() {
         </section>
         
         {/* Seção de Localização com Mapa */}
-        <section className="section bg-light location-section" id="contato">
-          <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s' }}>
+        <section className="section bg-light location-section" id="contato" style={{position: 'relative', overflow: 'hidden', paddingTop: '8vw'}}>
+          {/* Watermark */}
+          <div style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            textAlign: 'center',
+            fontSize: '7.5vw',
+            fontWeight: 900,
+            color: 'rgba(0,0,0,0.05)',
+            zIndex: 0,
+            pointerEvents: 'none',
+            fontFamily: 'var(--font-montserrat)',
+            letterSpacing: '0.2vw',
+            userSelect: 'none',
+            lineHeight: 1
+          }}>ATENDIMENTO VIP</div>
+
+          <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s', position: 'relative', zIndex: 2 }}>
             <div className="location-text">
               <h2>Visite a Óticas Candiani</h2>
               <p>

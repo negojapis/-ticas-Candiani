@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
         <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--color-text)' }}>Política de Privacidade</h1>
         
         <div style={{ lineHeight: '1.8', color: '#444' }}>
-          <p>A Óticas Candiani ("nós", "nosso") valoriza a sua privacidade e está comprometida em proteger os seus dados pessoais. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos as suas informações quando você utiliza nosso site e nossos serviços.</p>
+          <p>A Óticas Candiani (&quot;nós&quot;, &quot;nosso&quot;) valoriza a sua privacidade e está comprometida em proteger os seus dados pessoais. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos as suas informações quando você utiliza nosso site e nossos serviços.</p>
 
           <h2 style={{ fontSize: '1.5rem', marginTop: '2rem', marginBottom: '1rem', color: 'var(--color-text)' }}>1. Informações que Coletamos</h2>
           <p>Ao interagir com nosso site (por exemplo, através do nosso popup de atendimento ou botão do WhatsApp), podemos coletar as seguintes informações:</p>

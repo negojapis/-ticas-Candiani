@@ -1,7 +1,8 @@
 .aboutSection {
-  padding: 8rem 2%;
+  padding: 14vw 2% 8rem 2%;
   background-color: var(--color-white);
   overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -11,6 +12,24 @@
   max-width: 1800px;
   margin: 0 auto;
   gap: 8rem;
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14vw;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+  pointer-events: none;
+  font-family: var(--font-montserrat), sans-serif;
+  letter-spacing: 1vw;
+  user-select: none;
+  line-height: 1;
 }
 
 .textColumn {

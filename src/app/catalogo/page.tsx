@@ -69,11 +69,8 @@ export default function Catalogo() {
                   <div style={{padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1}}>
                     <span style={{fontSize: '0.8rem', color: 'var(--color-accent)', fontWeight: 'bold', textTransform: 'uppercase'}}>{product.category}</span>
                     <h3 style={{margin: '0.5rem 0', fontSize: '1.2rem', color: 'var(--color-text)'}}>{product.name}</h3>
-                    <p style={{fontWeight: 'bold', fontSize: '1.25rem', color: 'var(--color-primary)', marginTop: 'auto', marginBottom: '1rem'}}>
-                      R$ {product.price.toFixed(2).replace('.', ',')}
-                    </p>
-                    <div className="btn btn-primary" style={{width: '100%', textAlign: 'center'}}>
-                      Saber mais
+                    <div className="btn btn-primary" style={{width: '100%', textAlign: 'center', marginTop: 'auto', padding: '0.8rem', fontWeight: 'bold'}}>
+                      Quero Detalhes
                     </div>
                   </div>
                 </div>

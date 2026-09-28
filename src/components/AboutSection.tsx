@@ -1,13 +1,14 @@
 "use client";
 import React from 'react';
 import styles from './AboutSection.module.css';
-import Link from 'next/link';
 
 export default function AboutSection() {
   return (
     <section id="sobre" className={styles.aboutSection}>
+      {/* Background Watermark */}
+      <div className={styles.watermark}>CANDIANI</div>
+      
       <div className={styles.container}>
-        
         {/* Left Column - Text */}
         <div className={styles.textColumn}>
           <span className={styles.subtitle}>Sobre a Óticas Candiani</span>
