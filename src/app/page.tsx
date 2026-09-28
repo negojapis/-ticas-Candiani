@@ -76,13 +76,19 @@ export default function Home() {
             textAlign: 'center',
             fontSize: '15vw',
             fontWeight: 900,
-            color: 'rgba(0,0,0,0.05)',
             zIndex: 0,
             pointerEvents: 'none',
             fontFamily: 'var(--font-montserrat)',
             letterSpacing: '1vw',
             userSelect: 'none',
-            lineHeight: 1
+            lineHeight: 1,
+            color: 'transparent',
+            backgroundImage: 'url("/images/sunflower_pattern.jpg")',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.15
           }}>PREMIUM</div>
 
           <div className="container text-center animate-fade-in" style={{ opacity: 0, marginBottom: '4rem', position: 'relative', zIndex: 2 }}>
@@ -180,13 +186,19 @@ export default function Home() {
             textAlign: 'center',
             fontSize: '7.5vw',
             fontWeight: 900,
-            color: 'rgba(0,0,0,0.05)',
             zIndex: 0,
             pointerEvents: 'none',
             fontFamily: 'var(--font-montserrat)',
             letterSpacing: '0.2vw',
             userSelect: 'none',
-            lineHeight: 1
+            lineHeight: 1,
+            color: 'transparent',
+            backgroundImage: 'url("/images/sunflower_pattern.jpg")',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.15
           }}>ATENDIMENTO VIP</div>
 
           <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s', position: 'relative', zIndex: 2 }}>

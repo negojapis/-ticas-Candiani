@@ -23,13 +23,19 @@
   text-align: center;
   font-size: 14vw;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.05);
   z-index: 0;
   pointer-events: none;
   font-family: var(--font-montserrat), sans-serif;
   letter-spacing: 1vw;
   user-select: none;
   line-height: 1;
+  color: transparent;
+  background-image: url('/images/sunflower_pattern.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* Sutil como marca d'água */
 }
 
 .textColumn {
