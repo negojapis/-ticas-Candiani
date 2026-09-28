@@ -178,7 +178,7 @@ export default function Home() {
             left: '0',
             width: '100%',
             textAlign: 'center',
-            fontSize: '7.5vw',
+            fontSize: '11vw',
             fontWeight: 900,
             color: 'rgba(0,0,0,0.05)',
             zIndex: 0,
@@ -187,7 +187,7 @@ export default function Home() {
             letterSpacing: '0.2vw',
             userSelect: 'none',
             lineHeight: 1
-          }}>ATENDIMENTO VIP</div>
+          }}>ATENDIMENTO</div>
 
           <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s', position: 'relative', zIndex: 2 }}>
             <div className="location-text">
