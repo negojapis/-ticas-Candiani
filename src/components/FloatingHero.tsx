@@ -59,6 +59,10 @@ export function FloatingHero({ title, description, images, ctaText, ctaLink }: F
       <div className={styles.swirlContainer}>
         <Swirls />
       </div>
+
+      <div className={styles.interactiveWatermark}>
+        CANDIANI
+      </div>
       
       <div className={styles.imagesContainer}>
         {images.map((image, index) => (
