@@ -127,14 +127,15 @@
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 11vw;
+    white-space: nowrap;
   }
   .description {
     font-size: 1.1rem;
     white-space: normal; /* Permite quebra de linha no celular para não quebrar o layout */
   }
   .heroSection {
-    min-height: 60vh;
+    min-height: 85vh; /* Aumentado de 60vh para dar bastante espaço em branco no topo e na base */
   }
   .textContent {
     padding: 1.5rem;
@@ -148,18 +149,19 @@
     height: auto !important;
   }
   
-  /* Exibe todos os 6 óculos no mobile, com layout verdadeiramente espalhado (assimétrico) e menor para não poluir */
+  /* Exibe todos os 6 óculos, mas agrupados no topo e na base para ESVAZIAR o meio */
   .floatingImage:nth-child(2),
   .floatingImage:nth-child(5) {
     display: block !important;
   }
 
-  .floatingImage:nth-child(1) { top: 5% !important; left: 10% !important; max-width: 85px !important; }
-  .floatingImage:nth-child(4) { top: 12% !important; right: 8% !important; max-width: 80px !important; }
+  /* GRUPO DO TOPO (Longe do título) */
+  .floatingImage:nth-child(1) { top: 4% !important; left: 2% !important; max-width: 75px !important; }
+  .floatingImage:nth-child(4) { top: 6% !important; right: 5% !important; max-width: 65px !important; }
+  .floatingImage:nth-child(2) { top: 16% !important; left: 10% !important; max-width: 70px !important; }
   
-  .floatingImage:nth-child(2) { top: 45% !important; left: 4% !important; max-width: 75px !important; }
-  .floatingImage:nth-child(5) { top: 35% !important; right: 4% !important; max-width: 70px !important; }
-  
-  .floatingImage:nth-child(3) { bottom: 5% !important; left: 18% !important; max-width: 90px !important; }
-  .floatingImage:nth-child(6) { bottom: 15% !important; right: 12% !important; max-width: 85px !important; }
+  /* GRUPO DA BASE (Longe do botão) */
+  .floatingImage:nth-child(5) { bottom: 22% !important; right: 4% !important; max-width: 60px !important; }
+  .floatingImage:nth-child(3) { bottom: 6% !important; left: 6% !important; max-width: 80px !important; }
+  .floatingImage:nth-child(6) { bottom: 10% !important; right: 2% !important; max-width: 75px !important; }
 }
