@@ -15,41 +15,17 @@
   position: relative;
 }
 
-.watermarkContainer {
+.watermark {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.watermarkVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.25; /* Sutil como marca d'água */
-}
-
-.watermarkMask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-white);
-  color: #000000;
-  mix-blend-mode: screen;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  text-align: center;
   font-size: 14vw;
   font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+  pointer-events: none;
   font-family: var(--font-montserrat), sans-serif;
   letter-spacing: 1vw;
   user-select: none;
