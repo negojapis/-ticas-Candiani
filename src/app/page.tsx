@@ -68,28 +68,13 @@ export default function Home() {
 
         <section className="features section bg-light" style={{position: 'relative', overflow: 'hidden', paddingTop: '15vw'}}>
           {/* Watermark */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            width: '100%',
-            textAlign: 'center',
-            fontSize: '15vw',
-            fontWeight: 900,
-            zIndex: 0,
-            pointerEvents: 'none',
-            fontFamily: 'var(--font-montserrat)',
-            letterSpacing: '1vw',
-            userSelect: 'none',
-            lineHeight: 1,
-            color: 'transparent',
-            backgroundImage: 'url("/images/sunflower_pattern.jpg")',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.15
-          }}>PREMIUM</div>
+          {/* Watermark Video */}
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+            <video src="/videos/Sunflowers_swaying_in_breeze_1080p_20260928173832.mp4" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.25 }} />
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#ffffff', color: '#000000', mixBlendMode: 'screen', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', fontSize: '15vw', fontWeight: 900, fontFamily: 'var(--font-montserrat), sans-serif', letterSpacing: '1vw', userSelect: 'none', lineHeight: 1 }}>
+              PREMIUM
+            </div>
+          </div>
 
           <div className="container text-center animate-fade-in" style={{ opacity: 0, marginBottom: '4rem', position: 'relative', zIndex: 2 }}>
             <h2 style={{ fontSize: '2.5rem', color: 'var(--color-text)' }}>O Nosso Jeito de Cuidar da Sua Visão</h2>
@@ -178,28 +163,13 @@ export default function Home() {
         {/* Seção de Localização com Mapa */}
         <section className="section bg-light location-section" id="contato" style={{position: 'relative', overflow: 'hidden', paddingTop: '8vw'}}>
           {/* Watermark */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            width: '100%',
-            textAlign: 'center',
-            fontSize: '7.5vw',
-            fontWeight: 900,
-            zIndex: 0,
-            pointerEvents: 'none',
-            fontFamily: 'var(--font-montserrat)',
-            letterSpacing: '0.2vw',
-            userSelect: 'none',
-            lineHeight: 1,
-            color: 'transparent',
-            backgroundImage: 'url("/images/sunflower_pattern.jpg")',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.15
-          }}>ATENDIMENTO VIP</div>
+          {/* Watermark Video */}
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+            <video src="/videos/Sunflowers_swaying_in_breeze_1080p_20260928173832.mp4" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.25 }} />
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#ffffff', color: '#000000', mixBlendMode: 'screen', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', fontSize: '7.5vw', fontWeight: 900, fontFamily: 'var(--font-montserrat), sans-serif', letterSpacing: '0.2vw', userSelect: 'none', lineHeight: 1, whiteSpace: 'nowrap' }}>
+              ATENDIMENTO VIP
+            </div>
+          </div>
 
           <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s', position: 'relative', zIndex: 2 }}>
             <div className="location-text">
