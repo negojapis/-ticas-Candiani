@@ -170,7 +170,7 @@ export default function Home() {
         </section>
         
         {/* Seção de Localização com Mapa */}
-        <section className="section bg-light location-section" id="contato" style={{position: 'relative', overflow: 'hidden', paddingTop: '13vw'}}>
+        <section className="section bg-light location-section" id="contato" style={{position: 'relative', overflow: 'hidden', paddingTop: '18vw'}}>
           {/* Watermark */}
           <div style={{
             position: 'absolute',
