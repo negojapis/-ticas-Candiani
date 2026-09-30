@@ -141,24 +141,34 @@ export const products: Product[] = [
   // Acessórios
   {
     id: 13,
-    name: 'Estojo Premium Couro',
-    price: 89.90,
+    name: 'Spray Limpa Lentes',
+    price: 35.90,
     category: 'Acessórios',
-    description: 'Estojo rígido com revestimento em couro sintético de alta durabilidade. Interior aveludado para proteger suas lentes contra riscos. Fecho magnético e design minimalista e elegante para carregar seus óculos com segurança.',
-    image: '/images/estojo_premium_couro.png',
-    images: ['/images/estojo_premium_couro.png'],
+    description: 'Spray de limpeza profunda formulado para lentes de grau e solares. Remove marcas de dedo, poeira e oleosidade sem riscar ou danificar tratamentos antirreflexo. Ideal para manter sua visão sempre nítida.',
+    image: '/images/Spray.png',
+    images: ['/images/Spray.png'],
     blend: false
   },
   
   // Lentes de Contato
   {
     id: 14,
-    name: 'Lentes Acuvue Oasys',
-    price: 149.90,
+    name: 'Bioview 55 Asférica',
+    price: 129.90,
     category: 'Lentes de Contato',
-    description: 'Lentes de contato de descarte quinzenal com tecnologia Hydraclear Plus. Conforto imbatível até mesmo em ambientes com ar condicionado ou uso prolongado de telas digitais.',
-    image: '/images/lentes_acuvue_oasys.png',
-    images: ['/images/lentes_acuvue_oasys.png'],
+    description: 'Lentes de contato gelatinosas de descarte mensal. Com desenho asférico e 55% de hidratação, proporcionam visão de alta definição, compensando aberrações visuais, além de conforto e proteção contra raios UV ao longo de todo o dia.',
+    image: '/images/bioview_55.png',
+    images: ['/images/bioview_55.png'],
+    blend: false
+  },
+  {
+    id: 15,
+    name: 'Bausch + Lomb ULTRA',
+    price: 219.90,
+    category: 'Lentes de Contato',
+    description: 'Lentes de descarte mensal de silicone hidrogel com exclusiva tecnologia MoistureSeal®, que ajuda a manter 95% da hidratação da lente por até 16 horas. Ideais para quem passa muito tempo em frente a telas digitais, oferecendo conforto prolongado.',
+    image: '/images/bausch_lomb_ultra.png',
+    images: ['/images/bausch_lomb_ultra.png'],
     blend: false
   }
 ];
