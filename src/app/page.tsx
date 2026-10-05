@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 import { FloatingHero } from '@/components/FloatingHero';
 import AboutSection from '@/components/AboutSection';
+import { Microscope, Gem, HeartHandshake, ShieldCheck, MapPin, Clock } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -10,7 +12,9 @@ export default function Home() {
         <div className="header-content animate-fade-in">
           <div className="logo">
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '2.5rem', lineHeight: 0 }}>🌻</span>
+              <div style={{ display: 'flex', alignItems: 'center', height: '45px' }}>
+                <Image src="/images/logo-oticas-candiani-site-200x200.png" alt="Óticas Candiani" width={180} height={180} style={{ margin: '-65px -35px' }} />
+              </div>
               <span className="logo-text">Para enxergar sempre o lado bom da vida</span>
             </Link>
           </div>
@@ -90,22 +94,30 @@ export default function Home() {
           </div>
           <div className="container-large features-grid" style={{position: 'relative', zIndex: 2}}>
             <div className="feature-card animate-slide-up" style={{ opacity: 0 }}>
-              <div className="feature-icon">🔬</div>
+              <div className="feature-icon">
+                <Microscope size={56} strokeWidth={1.5} color="var(--color-primary)" />
+              </div>
               <h3>Lentes de Alta Tecnologia</h3>
               <p>Trabalhamos com os melhores laboratórios do mercado, como Essilor, Zeiss e Hoya, para garantir precisão absoluta. Seja visão simples, multifocal ou tratamento antirreflexo, sua visão merece o que há de melhor.</p>
             </div>
             <div className="feature-card animate-slide-up delay-1" style={{ opacity: 0 }}>
-              <div className="feature-icon">✨</div>
+              <div className="feature-icon">
+                <Gem size={56} strokeWidth={1.5} color="var(--color-primary)" />
+              </div>
               <h3>Armações Premium e Exclusivas</h3>
               <p>Modelos selecionados a dedo das principais grifes nacionais e internacionais. Garantimos design sofisticado, conforto incomparável, extrema durabilidade e aquela estética refinada que valoriza o seu rosto.</p>
             </div>
             <div className="feature-card animate-slide-up delay-2" style={{ opacity: 0 }}>
-              <div className="feature-icon">🤝</div>
+              <div className="feature-icon">
+                <HeartHandshake size={56} strokeWidth={1.5} color="var(--color-primary)" />
+              </div>
               <h3>O Melhor Atendimento de Itupeva</h3>
               <p>Uma experiência de compra única na cidade. Nossa equipe de especialistas realiza consultoria visagista para te ajudar a escolher a armação perfeita que harmoniza com seu formato de rosto e estilo pessoal.</p>
             </div>
             <div className="feature-card animate-slide-up delay-3" style={{ opacity: 0 }}>
-              <div className="feature-icon">🛠️</div>
+              <div className="feature-icon">
+                <ShieldCheck size={56} strokeWidth={1.5} color="var(--color-primary)" />
+              </div>
               <h3>Garantia e Ajustes Gratuitos</h3>
               <p>Nosso compromisso não termina na entrega. Oferecemos ajustes, limpeza ultrassônica e manutenção preventiva gratuitos para que seus óculos estejam sempre perfeitos e confortáveis no seu rosto.</p>
             </div>
@@ -198,14 +210,14 @@ export default function Home() {
               
               <div className="location-info">
                 <div className="info-item">
-                  <span className="icon">📍</span>
+                  <span className="icon"><MapPin size={28} color="var(--color-primary)" /></span>
                   <div>
                     <strong>Endereço</strong>
                     <span>Av. Brasil, 209 - Centro, Itupeva - SP, 13295-000</span>
                   </div>
                 </div>
                 <div className="info-item">
-                  <span className="icon">🕒</span>
+                  <span className="icon"><Clock size={28} color="var(--color-primary)" /></span>
                   <div>
                     <strong>Horário de Funcionamento</strong>
                     <span>Segunda a Sexta: 09h às 18h<br/>Sábado: 09h às 13h</span>

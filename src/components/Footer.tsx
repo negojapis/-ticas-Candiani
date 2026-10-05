@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -8,7 +9,9 @@ export default function Footer() {
         <div className="footer-col brand-col">
           <Link href="/">
             <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.8rem', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '1rem' }}>
-              <span style={{fontSize: '2rem'}}>🌻</span> Óticas Candiani
+              <div style={{ display: 'flex', alignItems: 'center', height: '40px' }}>
+                <Image src="/images/logo-oticas-candiani-site-200x200.png" alt="Logo Óticas Candiani" width={150} height={150} style={{ margin: '-55px -25px' }} />
+              </div>
             </span>
           </Link>
           <p className="footer-desc">

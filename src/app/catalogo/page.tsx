@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from '@/components/Footer';
 import { products } from '@/data/products';
 
@@ -20,7 +21,9 @@ export default function Catalogo() {
         <div className="header-content">
           <div className="logo">
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '2.5rem', lineHeight: 0 }}>🌻</span>
+              <div style={{ display: 'flex', alignItems: 'center', height: '45px' }}>
+                <Image src="/images/logo-oticas-candiani-site-200x200.png" alt="Óticas Candiani" width={180} height={180} style={{ margin: '-65px -35px' }} />
+              </div>
               <span className="logo-text">Para enxergar sempre o lado bom da vida</span>
             </Link>
           </div>

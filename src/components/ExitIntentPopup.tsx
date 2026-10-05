@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function ExitIntentPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,11 @@ export default function ExitIntentPopup() {
           &times;
         </button>
         <div className="exit-content">
-          <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🌻</span>
+          <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', height: '56px' }}>
+              <Image src="/images/logo-oticas-candiani-site-200x200.png" alt="Logo Óticas Candiani" width={200} height={200} style={{ margin: '-72px -35px' }} />
+            </div>
+          </div>
           <h2 className="exit-title">Já vai?</h2>
           <p className="exit-desc">
             Deixe seu WhatsApp com a gente! Nossa equipe de especialistas vai entrar em contato para ajudar você a encontrar os óculos perfeitos, sem compromisso.
