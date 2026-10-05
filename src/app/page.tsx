@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
-import { FloatingHero } from '@/components/FloatingHero';
 import AboutSection from '@/components/AboutSection';
 import { Microscope, Gem, HeartHandshake, ShieldCheck, MapPin, Clock } from 'lucide-react';
 
@@ -29,44 +28,69 @@ export default function Home() {
       </header>
 
       <main>
-        <FloatingHero 
-          title="Óticas Candiani"
-          description="Armações exclusivas, lentes de alta tecnologia e atendimento personalizado em Itupeva."
-          ctaText="Ver Coleção"
-          ctaLink="/catalogo"
-          images={[
-            {
-              src: "/images/round_black_glasses_new_1789055635143.jpg",
-              alt: "Óculos Preto Redondo",
-              style: { width: '280px', top: '2%', left: '12%', transform: 'rotate(-10deg)' }
-            },
-            {
-              src: "/images/glasses_pink_round.jpg",
-              alt: "Óculos Rosa Redondo",
-              style: { width: '250px', top: '30%', left: '2%', transform: 'rotate(15deg)' }
-            },
-            {
-              src: "/images/square_blue_glasses_1789054658916.jpg",
-              alt: "Óculos Azul Quadrado",
-              style: { width: '300px', bottom: '2%', left: '15%', transform: 'rotate(-20deg)' }
-            },
-            {
-              src: "/images/aviator_gold_glasses_1789054614994.jpg",
-              alt: "Óculos Aviador Dourado",
-              style: { width: '270px', top: '2%', right: '15%', transform: 'rotate(20deg)' }
-            },
-            {
-              src: "/images/glasses_green_modern.jpg",
-              alt: "Óculos Verde Moderno",
-              style: { width: '310px', top: '30%', right: '2%', transform: 'rotate(-10deg)' }
-            },
-            {
-              src: "/images/cateye_red_glasses_1789054604186.jpg",
-              alt: "Óculos Vermelho Cat-eye",
-              style: { width: '290px', bottom: '2%', right: '12%', transform: 'rotate(12deg)' }
-            }
-          ]}
-        />
+        <section className="hero-banner" style={{ width: '100%', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ display: 'block', width: '100%', position: 'relative' }}>
+            <Image 
+              src="/images/candiani-hero-1920x1080.png" 
+              alt="Óticas Candiani" 
+              width={1920} 
+              height={1080} 
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} 
+              priority
+            />
+            {/* Texto elegante sobreposto na hero com animações de entrada */}
+            <div className="interactive-text" style={{
+              position: 'absolute',
+              top: '38%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              textAlign: 'center',
+              width: '100%',
+              padding: '0 1rem',
+              pointerEvents: 'auto'
+            }}>
+              <span className="animate-slide-up" style={{
+                opacity: 0,
+                display: 'block',
+                fontFamily: 'var(--font-montserrat), sans-serif',
+                fontSize: 'clamp(1rem, 2.5vw, 1.8rem)',
+                fontWeight: 500,
+                letterSpacing: '0.4em',
+                color: '#666',
+                textTransform: 'uppercase',
+                marginBottom: '0.5rem',
+                textShadow: '0px 2px 10px rgba(255,255,255,0.8)'
+              }}>
+                Óticas
+              </span>
+              <h1 className="animate-slide-up delay-1" style={{
+                opacity: 0,
+                fontFamily: 'var(--font-montserrat), sans-serif',
+                fontSize: 'clamp(3.5rem, 9vw, 8rem)',
+                fontWeight: 800,
+                color: '#1a1a1a',
+                lineHeight: 0.9,
+                letterSpacing: '-0.03em',
+                margin: 0,
+                textShadow: '0px 4px 20px rgba(255,255,255,0.8)'
+              }}>
+                Candiani
+              </h1>
+            </div>
+
+            {/* Gradiente para suavizar e esconder o recorte inferior da foto */}
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '100%',
+              height: '12vw',
+              minHeight: '100px',
+              background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
+              pointerEvents: 'none'
+            }} />
+          </div>
+        </section>
 
         <AboutSection />
 
