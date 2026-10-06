@@ -6,7 +6,11 @@ export default function AboutSection() {
   return (
     <section id="sobre" className={styles.aboutSection}>
       {/* Background Watermark */}
-      <div className={styles.watermark}>CANDIANI</div>
+      <div className={styles.watermark}>
+        {"CANDIANI".split("").map((char, index) => (
+          <span key={index}>{char}</span>
+        ))}
+      </div>
       
       <div className={styles.container}>
         {/* Left Column - Text */}

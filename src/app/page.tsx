@@ -101,17 +101,19 @@ export default function Home() {
             top: '0',
             left: '0',
             width: '100%',
-            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'space-between',
             fontSize: '15vw',
             fontWeight: 900,
-            color: 'rgba(0,0,0,0.05)',
+            color: 'rgba(0,0,0,0.08)',
             zIndex: 0,
             pointerEvents: 'none',
             fontFamily: 'var(--font-montserrat)',
-            letterSpacing: '1vw',
             userSelect: 'none',
             lineHeight: 1
-          }}>PREMIUM</div>
+          }}>
+            {"PREMIUM".split("").map((char, index) => <span key={index}>{char}</span>)}
+          </div>
 
           <div className="container text-center animate-fade-in" style={{ opacity: 0, marginBottom: '4rem', position: 'relative', zIndex: 2 }}>
             <h2 style={{ fontSize: '2.5rem', color: 'var(--color-text)' }}>O Nosso Jeito de Cuidar da Sua Visão</h2>
@@ -213,17 +215,19 @@ export default function Home() {
             top: '0',
             left: '0',
             width: '100%',
-            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'space-between',
             fontSize: '11vw',
             fontWeight: 900,
-            color: 'rgba(0,0,0,0.05)',
+            color: 'rgba(0,0,0,0.08)',
             zIndex: 0,
             pointerEvents: 'none',
             fontFamily: 'var(--font-montserrat)',
-            letterSpacing: '0.2vw',
             userSelect: 'none',
             lineHeight: 1
-          }}>ATENDIMENTO</div>
+          }}>
+            {"ATENDIMENTO".split("").map((char, index) => <span key={index}>{char}</span>)}
+          </div>
 
           <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s', position: 'relative', zIndex: 2 }}>
             <div className="location-text">

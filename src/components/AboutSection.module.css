@@ -20,14 +20,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   font-size: 14vw;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.08);
   z-index: 0;
   pointer-events: none;
   font-family: var(--font-montserrat), sans-serif;
-  letter-spacing: 1vw;
   user-select: none;
   line-height: 1;
 }
