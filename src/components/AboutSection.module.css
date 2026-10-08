@@ -198,12 +198,23 @@
   .imageColumn {
     width: 100%;
     margin-top: 2rem;
-    min-height: 400px;
+    min-height: auto;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 
   .imageWrapper {
-    width: 220px;
-    height: 300px;
+    width: 31%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    transform: none !important; /* Alinhados perfeitamente no mobile */
+  }
+
+  .floatingGlasses {
+    display: none; /* Hide floating glasses on mobile to save space */
   }
 
   .overlayText {
@@ -212,23 +223,6 @@
 }
 
 @media (max-width: 768px) {
-  .imageColumn {
-    min-height: 350px;
-    width: 100vw;
-    margin-left: -5%;
-    padding: 0 5% 1rem 5%;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-  }
-  
-  .imageWrapper {
-    width: 200px;
-    height: 300px;
-    scroll-snap-align: center;
-  }
-  
   .overlayText {
     font-size: 3rem;
   }

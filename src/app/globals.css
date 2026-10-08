@@ -1129,3 +1129,28 @@ button {
     font-size: 2.5rem;
   }
 }
+
+/* Header Responsive (Mobile & Tablet) */
+@media (max-width: 992px) {
+  .header .logo {
+    display: none;
+  }
+  
+  .header-content {
+    justify-content: center;
+    min-height: 45px;
+    padding: 8px 10px;
+  }
+  
+  .nav {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
