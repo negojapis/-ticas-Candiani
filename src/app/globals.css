@@ -91,10 +91,16 @@ button {
 }
 
 .animate-fade-in {
+  opacity: 0;
+}
+.animate-fade-in.in-view {
   animation: fadeIn 1s ease-out forwards;
 }
 
 .animate-slide-up {
+  opacity: 0;
+}
+.animate-slide-up.in-view {
   animation: slideUp 0.8s ease-out forwards;
 }
 
@@ -203,8 +209,8 @@ button {
 }
 
 .nav a {
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.05rem;
   transition: color 0.3s ease;
   color: #000000;
 }
@@ -394,12 +400,12 @@ button {
 .brands-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 
 .brand-item {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #ccc;
   text-transform: uppercase;

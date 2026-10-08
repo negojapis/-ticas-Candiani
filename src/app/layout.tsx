@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 
 import WhatsAppButton from '@/components/WhatsAppButton'
 import ExitIntentPopup from '@/components/ExitIntentPopup'
+import ScrollObserver from '@/components/ScrollObserver'
 
 export default function RootLayout({
   children,
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${outfit.variable} ${montserrat.variable} ${greatVibes.variable}`}>
       <body>
+        <ScrollObserver />
         {children}
         <WhatsAppButton />
         <ExitIntentPopup />

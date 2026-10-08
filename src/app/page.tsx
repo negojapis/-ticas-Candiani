@@ -28,95 +28,119 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="hero-banner" style={{ width: '100%', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ display: 'block', width: '100%', position: 'relative' }}>
+        <section className="hero-banner" style={{ width: '100%', minHeight: 'max(80vh, 700px)', position: 'relative', overflow: 'hidden', backgroundColor: '#fffbf5' }}>
+          
+          {/* Imagem de fundo aprimorada */}
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
             <Image 
-              src="/images/candiani-hero-1920x1080.png" 
+              src="/images/candiani-hero-aprimorada-fullhd-1920x1080.png" 
               alt="Óticas Candiani" 
-              width={1920} 
-              height={1080} 
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} 
+              fill
+              quality={100}
+              style={{ objectFit: 'cover', objectPosition: 'center' }} 
               priority
             />
-            {/* Texto elegante sobreposto na hero com animações de entrada */}
-            <div className="interactive-text" style={{
-              position: 'absolute',
-              top: '38%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              textAlign: 'center',
-              width: '100%',
-              padding: '0 1rem',
-              pointerEvents: 'auto'
-            }}>
-              <span className="animate-slide-up" style={{
-                opacity: 0,
-                display: 'block',
-                fontFamily: 'var(--font-montserrat), sans-serif',
-                fontSize: 'clamp(1rem, 2.5vw, 1.8rem)',
-                fontWeight: 500,
-                letterSpacing: '0.4em',
-                color: '#666',
-                textTransform: 'uppercase',
-                marginBottom: '0.5rem',
-                textShadow: '0px 2px 10px rgba(255,255,255,0.8)'
-              }}>
-                Óticas
-              </span>
-              <h1 className="animate-slide-up delay-1" style={{
-                opacity: 0,
-                fontFamily: 'var(--font-montserrat), sans-serif',
-                fontSize: 'clamp(3.5rem, 9vw, 8rem)',
-                fontWeight: 800,
-                color: '#1a1a1a',
-                lineHeight: 0.9,
-                letterSpacing: '-0.03em',
-                margin: 0,
-                textShadow: '0px 4px 20px rgba(255,255,255,0.8)'
-              }}>
-                Candiani
-              </h1>
-            </div>
-
-            {/* Gradiente para suavizar e esconder o recorte inferior da foto */}
-            <div style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              width: '100%',
-              height: '12vw',
-              minHeight: '100px',
-              background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
-              pointerEvents: 'none'
-            }} />
           </div>
-        </section>
 
-        <AboutSection />
-
-        <section className="features section bg-light" style={{position: 'relative', overflow: 'hidden', paddingTop: '15vw'}}>
-          {/* Watermark */}
+          {/* Texto e Girassol */}
           <div style={{
             position: 'absolute',
-            top: '0',
-            left: '0',
+            top: '38%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            textAlign: 'center',
             width: '100%',
-            display: 'flex',
-            justifyContent: 'space-between',
-            fontSize: '15vw',
-            fontWeight: 900,
-            color: 'rgba(0,0,0,0.08)',
-            zIndex: 0,
-            pointerEvents: 'none',
-            fontFamily: 'var(--font-montserrat)',
-            userSelect: 'none',
-            lineHeight: 1
+            padding: '0 1rem',
+            pointerEvents: 'auto',
+            zIndex: 2
           }}>
-            {"PREMIUM".split("").map((char, index) => <span key={index}>{char}</span>)}
+
+            {/* Girassol de Fundo */}
+            <div style={{
+              position: 'absolute',
+              top: '75%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 'clamp(300px, 50vw, 650px)',
+              height: 'clamp(300px, 50vw, 650px)',
+              zIndex: -1,
+              opacity: 0.35,
+              pointerEvents: 'none'
+            }}>
+              <Image 
+                src="/images/Girassol dourado em linha fina.png"
+                alt="Girassol"
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
+
+            <span className="animate-slide-up" style={{
+              opacity: 0,
+              display: 'block',
+              fontFamily: 'var(--font-montserrat), sans-serif',
+              fontSize: 'clamp(1rem, 2.5vw, 1.8rem)',
+              fontWeight: 500,
+              letterSpacing: '0.4em',
+              color: '#666',
+              textTransform: 'uppercase',
+              marginBottom: '0.5rem',
+              textShadow: '0px 2px 10px rgba(255,255,255,0.8)'
+            }}>
+              Óticas
+            </span>
+            <h1 className="animate-slide-up delay-1" aria-label="Candiani" style={{
+              opacity: 0,
+              fontFamily: 'var(--font-outfit), sans-serif',
+              fontSize: 'clamp(4rem, 11vw, 9.5rem)',
+              fontWeight: 900,
+              color: '#000000',
+              lineHeight: 0.9,
+              letterSpacing: '0',
+              margin: 0,
+              textShadow: '0px 4px 20px rgba(255,255,255,0.8)'
+            }}>
+              <span aria-hidden="true">
+                Cand
+                <span style={{ position: 'relative', display: 'inline-block' }}>
+                  i
+                  <span style={{ position: 'absolute', top: '16%', left: '50%', transform: 'translate(-48%, -50%)', width: '0.32em', height: '0.32em', backgroundColor: 'var(--color-primary)', borderRadius: '50%' }}></span>
+                </span>
+                an
+                <span style={{ position: 'relative', display: 'inline-block' }}>
+                  i
+                  <span style={{ position: 'absolute', top: '16%', left: '50%', transform: 'translate(-48%, -50%)', width: '0.32em', height: '0.32em', backgroundColor: 'var(--color-primary)', borderRadius: '50%' }}></span>
+                </span>
+              </span>
+            </h1>
           </div>
 
+          {/* Gradiente sutil na base para transição */}
+          <div style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            height: '100px',
+            background: 'linear-gradient(to bottom, rgba(255,251,245,0) 0%, rgba(255,255,255,1) 100%)',
+            pointerEvents: 'none'
+          }} />
+        </section>
+
+        <section className="features section bg-light" style={{position: 'relative', overflow: 'hidden'}}>
+
           <div className="container text-center animate-fade-in" style={{ opacity: 0, marginBottom: '4rem', position: 'relative', zIndex: 2 }}>
-            <h2 style={{ fontSize: '2.5rem', color: 'var(--color-text)' }}>O Nosso Jeito de Cuidar da Sua Visão</h2>
+            <h2 style={{ 
+              fontSize: '2.5rem', 
+              color: 'var(--color-text)',
+              display: 'inline-block',
+              borderLeft: '3px solid var(--color-primary)',
+              paddingLeft: '1.2rem',
+              lineHeight: 1.2
+            }}>
+              O Nosso Jeito de Cuidar da Sua Visão
+            </h2>
           </div>
           <div className="container-large features-grid" style={{position: 'relative', zIndex: 2}}>
             <div className="feature-card animate-slide-up" style={{ opacity: 0 }}>
@@ -150,9 +174,16 @@ export default function Home() {
           </div>
         </section>
 
+        <AboutSection />
+
         <section className="brands-section bg-light">
           <div className="container text-center animate-fade-in" style={{ opacity: 0 }}>
-            <h2 className="brands-title">Marcas que Trabalhamos</h2>
+            <h2 className="brands-title" style={{
+              display: 'inline-block',
+              borderLeft: '3px solid var(--color-primary)',
+              paddingLeft: '1.2rem',
+              lineHeight: 1.2
+            }}>Marcas que Trabalhamos</h2>
             <p className="brands-subtitle">As melhores grifes do mundo, agora pertinho de você em Itupeva-SP.</p>
           </div>
           
@@ -231,7 +262,12 @@ export default function Home() {
 
           <div className="container location-grid animate-fade-in" style={{ opacity: 0, animationDelay: '0.3s', position: 'relative', zIndex: 2 }}>
             <div className="location-text">
-              <h2>Visite a Óticas Candiani</h2>
+              <h2 style={{
+                display: 'inline-block',
+                borderLeft: '3px solid var(--color-primary)',
+                paddingLeft: '1.2rem',
+                lineHeight: 1.2
+              }}>Visite a Óticas Candiani</h2>
               <p>
                 Venha tomar um café conosco e experimentar nossos modelos pessoalmente. Nossa equipe está pronta para te receber e oferecer a melhor consultoria visagista de Itupeva.
               </p>
